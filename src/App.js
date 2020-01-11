@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Map from './Map'
+import Toggler from './Toggler'
+import Search from './Search'
+import './App.css'
+import PlacesPanel from './PlacesPanel'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    // this pulls in a bunch of defaults that React needs in order to work. Just do it every time you establish state.
+    super(props)
+    this.state = {
+      map: null,
+      latitude: 53.79648,
+      longitude: -1.54785,
+      style: 'mapbox://styles/mapbox/dark-v10',
+      places: [],
+    }
+  }
+  render() {
+    return (
+      <div>
+        <PlacesPanel app={this}></PlacesPanel>
+        <Search app={this} />
+        <Toggler app={this}></Toggler>
+        <Map app={this}></Map>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App

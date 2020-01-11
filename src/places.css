@@ -1,0 +1,26 @@
+.places-panel {
+  position: fixed;
+  top: 65px;
+  left: 20px;
+  z-index: 1;
+  width: 25vw;
+  background: white;
+  padding: 5px 0;
+}
+
+.places-item {
+  cursor: pointer;
+}
+
+.places-item:hover {
+  background: #f1faff;
+}
+
+.places-item,
+.no-results {
+  padding: 5px 15px;
+}
+
+.no-results {
+  color: #999;
+}

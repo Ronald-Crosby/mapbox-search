@@ -1,0 +1,22 @@
+.toggler {
+  position: fixed;
+  z-index: 1;
+  bottom: 2.5rem;
+  left: 10px;
+}
+
+.toggler__button {
+  appearance: none;
+  outline: none;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin-right: 2px;
+  border: none;
+  background: white;
+  color: #999;
+  cursor: pointer;
+}
+
+.toggler__button--selected {
+  color: #000;
+}

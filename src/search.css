@@ -1,0 +1,16 @@
+.search {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.search__input {
+  padding: 2px 15px;
+  font-size: inherit;
+  font-family: inherit;
+  width: 25vw;
+  box-sizing: border-box;
+  line-height: 40px;
+  border: none;
+}
